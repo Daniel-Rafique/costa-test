@@ -37,16 +37,20 @@ class ProductsManagement
         // This is just for the test I am going to load a configurable product then get the child products
         // Normally the loop would check but this is only for the test.
         $product = $this->products->getById($id);
+
         // This is the parent product name and concatenated the SKU
         $productData['name'] = $product->getName() . ' ' . $product->getSku();
+
         // Get the child products
         $childIds = $this->configurable->getChildrenIds($product->getId());
         $childData = [];
+
+        /** @var $childIds array */
         foreach ($childIds[0] as $childId) {
             $simple = $this->products->getById($childId);
             $childData[] = [
                 'name' => $simple->getName(),
-                'sku' => $simple->getSku()
+                'sku' => $simple->getSku(),
             ];
         }
         return ['parent' => $productData, 'children' => $childData];
