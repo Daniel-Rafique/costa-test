@@ -14,7 +14,7 @@ namespace Costa\Test\Helper;
 
 use Magento\ConfigurableProduct\Model\Product\Type\Configurable;
 use Magento\Framework\App\Helper\AbstractHelper;
-use Magento\Catalog\Model\Product;
+use Magento\Catalog\Model\ProductRepository;
 
 class Data extends AbstractHelper
 {
@@ -23,7 +23,7 @@ class Data extends AbstractHelper
     protected $configurable;
 
     public function __construct(
-        Product $product,
+        ProductRepository $product,
         Configurable $configurable
     )
     {
@@ -36,8 +36,7 @@ class Data extends AbstractHelper
         // This is just for the test I am going to load a configurable product then get the child products
         // Normally the loop would check but this is only for the test.
 
-        $data = null;
-        $product = $this->products->loadByAttribute('sku', 'MH01');
+        $product = $this->products->get('sku', 'MH01');
 
         // This is the parent product name and concatenated the SKU
         $productData['name'] = $product->getName() . ' ' .  $product->getSku();
