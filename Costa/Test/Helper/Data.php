@@ -46,7 +46,7 @@ class Data extends AbstractHelper
 
         $childData = [];
         foreach ($childIds[0] as $childId){
-            $simple = $this->products->load($childId);
+            $simple = $this->products->getById($childId);
             $childData[] = ['name' => $simple->getName(),
                             'sku' => $simple->getSku()
             ];
