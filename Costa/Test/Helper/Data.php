@@ -39,16 +39,17 @@ class Data extends AbstractHelper
         $product = $this->products->get('sku', 'MH01');
 
         // This is the parent product name and concatenated the SKU
-        $productData['name'] = $product->getName() . ' ' .  $product->getSku();
+        $productData['name'] = $product->getName() . ' ' . $product->getSku();
 
         // Get the child products
-        $childIds =  $this->configurable->getChildrenIds($product->getId());
+        $childIds = $this->configurable->getChildrenIds($product->getId());
 
         $childData = [];
-        foreach ($childIds[0] as $childId){
+        foreach ($childIds[0] as $childId) {
             $simple = $this->products->getById($childId);
-            $childData[] = ['name' => $simple->getName(),
-                            'sku' => $simple->getSku()
+            $childData[] = [
+                'name' => $simple->getName(),
+                'sku' => $simple->getSku()
             ];
         }
 
