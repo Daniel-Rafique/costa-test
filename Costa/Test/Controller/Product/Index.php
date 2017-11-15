@@ -13,42 +13,42 @@ namespace Costa\Test\Controller\Product;
 
 use Costa\Test\Helper\Data;
 use Magento\Framework\App\Action\Context;
-use Magento\Framework\View\Result\PageFactory;
+use Magento\Framework\Controller\Result\JsonFactory;
 
 class Index extends \Magento\Framework\App\Action\Action
 {
 
-    protected $result;
     protected $helper;
+    protected $resultJsonFactory;
 
     /**
      * Constructor
      *
-     * @param Context  $context
-     * @param PageFactory $result
+     * @param Context $context
+     * @param Data $helper
+     * @param JsonFactory $jsonFactory
      */
     public function __construct(
         Context $context,
         Data $helper,
-        PageFactory $result
+        JsonFactory $jsonFactory
     ) {
         $this->helper = $helper;
-        $this->result = $result;
+        $this->resultJsonFactory = $jsonFactory;
         parent::__construct($context);
     }
 
     /**
      * Execute view action
      *
-     * @return \Magento\Framework\Controller\ResultInterface
      */
     public function execute()
     {
-        //We can create a basic Auth method before executing the code
-         $product = $this->helper->getProduct();
-
-         // Here I'll var_dump it
-         var_dump($product);
+        /**
+         *  We would normally create some basic Auth check before instatiating the getProduct() method
+         *  The Auth token would be stored in the admin config of the module using system.xml
+         */
+        return $this->resultJsonFactory->create()->setData($this->helper->getProduct());
 
     }
 }
