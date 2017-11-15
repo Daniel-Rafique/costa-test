@@ -53,8 +53,6 @@ class Data extends AbstractHelper
             ];
         }
 
-        $data = ['parent' => $productData, 'children' => $childData];
-        return json_encode($data);
-
+        return ['parent' => $productData, 'children' => $childData];
     }
 }
