@@ -1,10 +1,17 @@
 # Whitbread Magento developer test
-Just a simple test to get a configurable product with its attributes and child products
 
-## Add the module to the app/code directory the run php bin/magento setup:upgrade
+* Just a simple test to get a configurable product with its attributes and child products
 
-## Next run the compiler php bin/magento setup:di:compile
+* Add the module to the app/code directory the run php bin/magento setup:upgrade
 
-## Browse to the endpoint http://domain.com/V1/costa-test/products and you should see a list of products
+* Next run the compiler php bin/magento setup:di:compile
 
-### I've used sample product data which will load all of the products in the store 
+* Browse to the endpoint http://domain.com//test/product/index and you will see a load configurable product with it's child products
+
+* I've used sample product data which will load a product by SKU MH01
+
+* We use a custom controller as our endpoint since the Magento API isn't sufficient for what we need to do
+
+* The endpoint can take any value as a parameter when making a request for data or updating a model i.e string, array object
+
+* The endpoint can be wrapped with an Auth method using a token handshake etc
