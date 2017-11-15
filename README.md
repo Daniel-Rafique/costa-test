@@ -6,7 +6,7 @@
 
 * Next run the compiler php bin/magento setup:di:compile
 
-* Browse to the endpoint http://domain.com//test/product/index and you will see a loaded configurable product with it's child products in a json array
+* Browse to the endpoint http://domain.com/test/product/index and you will see a loaded configurable product with it's child products in a json array
 
 * I've used sample product data which will load a product by SKU MH01
 
