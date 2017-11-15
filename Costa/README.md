@@ -8,7 +8,7 @@
 
 * Browse to the endpoint http://domain.com/rest/V1/costa-test/products/69 and you will see a loaded configurable product with it's child products in a json array
 
-* I've used sample product data which will load a product by SKU MH01
+* I've used sample product data which will get a product by ID 69
 
 * We use a custom webservice for our endpoint
 
