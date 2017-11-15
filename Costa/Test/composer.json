@@ -1,0 +1,25 @@
+{
+    "name": "costa/module-test",
+    "description": "A web service method for Magento 2 Community Edition that will return a product with all of its child sku options in a single response.",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "email": "info@mage2gen.com",
+            "name": "Mage2Gen"
+        },
+        {
+            "email": "catchmel8r@gmail.com",
+            "name": "D Rafique"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Costa\\Test\\": ""
+        }
+    }
+}
