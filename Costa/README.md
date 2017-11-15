@@ -6,12 +6,10 @@
 
 * Next run the compiler php bin/magento setup:di:compile
 
-* Browse to the endpoint http://domain.com/rest/V1/costa-test/products/69 and you will see a loaded configurable product with it's child products in a json array
+* Browse to the endpoint http://domain.com/rest/V1/costa-test/products/69 and you will see a loaded configurable product with it's child products in a XML DOM Document
 
 * I've used sample product data which will get a product by ID 69
 
 * We use a custom webservice for our endpoint
 
-* The endpoint can take any value as a parameter when making a request for data or updating a model i.e string, array object
 
-* The endpoint can be wrapped with an Auth method using a token handshake etc
