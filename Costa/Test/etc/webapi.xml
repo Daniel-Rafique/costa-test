@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
-	<route method="GET" url="/V1/costa-test/products">
+	<route method="GET" url="/V1/costa-test/products/:id">
 		<service class="Costa\Test\Api\ProductsManagementInterface" method="getProducts"/>
 		<resources>
 			<resource ref="anonymous"/>
