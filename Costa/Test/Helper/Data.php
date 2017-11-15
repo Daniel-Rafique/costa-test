@@ -36,7 +36,7 @@ class Data extends AbstractHelper
         // This is just for the test I am going to load a configurable product then get the child products
         // Normally the loop would check but this is only for the test.
 
-        $product = $this->products->get('sku', 'MH01');
+        $product = $this->products->get('MH01');
 
         // This is the parent product name and concatenated the SKU
         $productData['name'] = $product->getName() . ' ' . $product->getSku();
