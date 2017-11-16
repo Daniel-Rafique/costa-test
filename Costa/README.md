@@ -1,4 +1,4 @@
-# Whitbread Magento developer test (Custom Endpoint)
+# Magento developer test (Custom Endpoint)
 
 * Just a simple test to get a configurable product with its attributes and child products
 
