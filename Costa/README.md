@@ -10,7 +10,7 @@
 
 * I've used sample product data which will load a product by SKU MH01
 
-* We use a custom controller as our endpoint since the Magento API isn't sufficient for what we need to do
+* We use a custom controller as our endpoint if the Magento API isn't sufficient for what we need to do
 
 * The endpoint can take any value as a parameter when making a request for data or updating a model i.e string, array object
 
