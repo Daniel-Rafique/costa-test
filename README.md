@@ -10,6 +10,5 @@
 
 * I've used sample product data which will get a product by ID 69
 
-* We use a custom webservice for our endpoint
 
 
