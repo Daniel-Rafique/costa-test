@@ -1,4 +1,4 @@
-# Magento developer test
+# Magento Custom Endpoint
 
 * Just a simple test to get a configurable product with its attributes and child products
 
